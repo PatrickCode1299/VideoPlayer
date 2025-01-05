@@ -6,9 +6,11 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 public class MainController {
 			@FXML
-			Button selectVideo;
+			MenuItem selectVideo;
 			@FXML
 			MediaView videoViewer;
 		
@@ -24,6 +26,7 @@ public class MainController {
 	             Media video = new Media(source);
 	             MediaPlayer videoPlayer = new MediaPlayer(video);
 	             videoPlayer.setAutoPlay(true);
+	             
 	             videoViewer.setMediaPlayer(videoPlayer);
 	         } else {
 	             System.out.println("No video selected.");
